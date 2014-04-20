@@ -4,9 +4,8 @@
 # 2. Recursive Sort T(n) = 2T(n/2)
 # 3. Merge 2 sorted lists
 
-def merge_leaf(node):
-    pass
 
+import math
 
 def merge_sort(alist):
     
@@ -16,9 +15,9 @@ def merge_sort(alist):
         return alist[0]
     
     else:
-        num1 = merge_sort(alist[:(len1/2)])
+        num1 = merge_sort(alist[:int(math.floor(len1/2))])
         
-        num2 = merge_sort(alist[(len1/2):])
+        num2 = merge_sort(alist[int(math.floor(len1/2)):])
         
         if num1 < num2:
             print num1
