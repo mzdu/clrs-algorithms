@@ -12,7 +12,7 @@
 
 # assume for each edge, edge[0] < edge[1]
 def find_eulerian_tour(graph):
-    # determine if a eulerian tour exists
+    # determine if a Eulerian tour exists
     degree_dict = {}
     
     for edge in graph:
