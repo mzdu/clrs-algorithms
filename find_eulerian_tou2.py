@@ -2,6 +2,7 @@ from collections import defaultdict
 from random import choice
 def find_eulerian_tour(graph):
     # nodes: dictionary of edges to travel in the form {node: list of nodes connected to that node}
+    # build a graph with defaultdict
     nodes = defaultdict(list)
     for k,l in graph:
         nodes[k].append(l)

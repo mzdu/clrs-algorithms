@@ -13,7 +13,11 @@ def make_link(G, node1, node2):
 def create_combo_lock(nodes):
     G = {}
     # your code here
-
+    make_link(G, nodes[0], nodes[1])
+    for i in range(2, len(nodes)):
+        make_link(G, nodes[i-1], nodes[i])
+        
+        make_link(G, 0, nodes[i])
     return G
 
 ##############
@@ -71,9 +75,6 @@ def is_combo_lock(graph, nodes):
                 continue
             make_link(chain, node, e)
     return is_chain(chain, [n for n in nodes if n != center])
-
-
-
 
 def test():
     for n in [5, 10, 20]:
